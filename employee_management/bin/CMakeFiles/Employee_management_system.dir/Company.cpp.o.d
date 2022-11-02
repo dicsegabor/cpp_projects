@@ -2,6 +2,7 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.cpp \
  /usr/include/stdc-predef.h \
  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.h \
+ /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.h \
  /usr/include/boost/serialization/access.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -48,7 +49,8 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
  /usr/include/boost/config/detail/cxx_composite.hpp \
- /usr/include/boost/serialization/list.hpp /usr/include/c++/12.2.0/list \
+ /usr/include/boost/serialization/vector.hpp \
+ /usr/include/c++/12.2.0/vector \
  /usr/include/c++/12.2.0/bits/stl_algobase.h \
  /usr/include/c++/12.2.0/bits/functexcept.h \
  /usr/include/c++/12.2.0/bits/exception_defines.h \
@@ -71,23 +73,28 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/c++/12.2.0/bits/new_allocator.h /usr/include/c++/12.2.0/new \
  /usr/include/c++/12.2.0/bits/exception.h \
  /usr/include/c++/12.2.0/bits/memoryfwd.h \
- /usr/include/c++/12.2.0/bits/range_access.h \
- /usr/include/c++/12.2.0/initializer_list \
- /usr/include/c++/12.2.0/bits/stl_list.h \
+ /usr/include/c++/12.2.0/bits/stl_construct.h \
+ /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
  /usr/include/c++/12.2.0/ext/alloc_traits.h \
  /usr/include/c++/12.2.0/bits/alloc_traits.h \
- /usr/include/c++/12.2.0/bits/stl_construct.h \
- /usr/include/c++/12.2.0/bits/allocated_ptr.h \
- /usr/include/c++/12.2.0/ext/aligned_buffer.h \
- /usr/include/c++/12.2.0/bits/list.tcc \
- /usr/include/boost/serialization/collections_save_imp.hpp \
- /usr/include/boost/core/addressof.hpp \
+ /usr/include/c++/12.2.0/bits/stl_vector.h \
+ /usr/include/c++/12.2.0/initializer_list \
+ /usr/include/c++/12.2.0/bits/stl_bvector.h \
+ /usr/include/c++/12.2.0/bits/functional_hash.h \
+ /usr/include/c++/12.2.0/bits/hash_bytes.h \
+ /usr/include/c++/12.2.0/bits/refwrap.h \
+ /usr/include/c++/12.2.0/bits/invoke.h \
+ /usr/include/c++/12.2.0/bits/stl_function.h \
+ /usr/include/c++/12.2.0/backward/binders.h \
+ /usr/include/c++/12.2.0/bits/range_access.h \
+ /usr/include/c++/12.2.0/bits/vector.tcc \
+ /usr/include/boost/detail/workaround.hpp \
+ /usr/include/boost/config/workaround.hpp \
  /usr/include/boost/serialization/nvp.hpp /usr/include/boost/core/nvp.hpp \
+ /usr/include/boost/core/addressof.hpp \
  /usr/include/boost/preprocessor/stringize.hpp \
  /usr/include/boost/preprocessor/config/config.hpp \
  /usr/include/boost/serialization/level.hpp \
- /usr/include/boost/detail/workaround.hpp \
- /usr/include/boost/config/workaround.hpp \
  /usr/include/boost/type_traits/is_fundamental.hpp \
  /usr/include/boost/type_traits/is_arithmetic.hpp \
  /usr/include/boost/type_traits/is_integral.hpp \
@@ -286,10 +293,6 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/c++/12.2.0/bits/ostream_insert.h \
  /usr/include/c++/12.2.0/bits/cxxabi_forced.h \
- /usr/include/c++/12.2.0/bits/stl_function.h \
- /usr/include/c++/12.2.0/backward/binders.h \
- /usr/include/c++/12.2.0/bits/refwrap.h \
- /usr/include/c++/12.2.0/bits/invoke.h \
  /usr/include/c++/12.2.0/bits/basic_string.h \
  /usr/include/c++/12.2.0/ext/string_conversions.h \
  /usr/include/c++/12.2.0/cstdio /usr/include/stdio.h \
@@ -302,8 +305,6 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/12.2.0/bits/charconv.h \
- /usr/include/c++/12.2.0/bits/functional_hash.h \
- /usr/include/c++/12.2.0/bits/hash_bytes.h \
  /usr/include/c++/12.2.0/bits/basic_string.tcc \
  /usr/include/c++/12.2.0/bits/locale_classes.tcc \
  /usr/include/c++/12.2.0/system_error \
@@ -339,6 +340,22 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/boost/type_traits/is_polymorphic.hpp \
  /usr/include/boost/serialization/force_include.hpp \
  /usr/include/boost/serialization/void_cast_fwd.hpp \
+ /usr/include/boost/serialization/collection_size_type.hpp \
+ /usr/include/boost/serialization/is_bitwise_serializable.hpp \
+ /usr/include/boost/serialization/library_version_type.hpp \
+ /usr/include/c++/12.2.0/cstring /usr/include/string.h \
+ /usr/include/strings.h /usr/include/boost/cstdint.hpp \
+ /usr/include/boost/assert.hpp /usr/include/assert.h \
+ /usr/include/boost/integer_traits.hpp /usr/include/boost/limits.hpp \
+ /usr/include/c++/12.2.0/limits \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h \
+ /usr/include/boost/serialization/item_version_type.hpp \
+ /usr/include/boost/serialization/collections_save_imp.hpp \
  /usr/include/boost/serialization/version.hpp \
  /usr/include/boost/mpl/assert.hpp /usr/include/boost/mpl/not.hpp \
  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
@@ -353,18 +370,6 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/less_equal.hpp \
  /usr/include/boost/mpl/greater_equal.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
- /usr/include/boost/serialization/collection_size_type.hpp \
- /usr/include/boost/serialization/is_bitwise_serializable.hpp \
- /usr/include/boost/serialization/item_version_type.hpp \
- /usr/include/boost/cstdint.hpp /usr/include/boost/integer_traits.hpp \
- /usr/include/boost/limits.hpp /usr/include/c++/12.2.0/limits \
- /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /usr/include/boost/assert.hpp \
- /usr/include/assert.h \
  /usr/include/boost/serialization/collections_load_imp.hpp \
  /usr/include/boost/serialization/detail/stack_constructor.hpp \
  /usr/include/boost/aligned_storage.hpp \
@@ -388,20 +393,44 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/boost/move/detail/meta_utils.hpp \
  /usr/include/boost/move/detail/meta_utils_core.hpp \
  /usr/include/boost/move/detail/addressof.hpp \
- /usr/include/boost/serialization/library_version_type.hpp \
- /usr/include/c++/12.2.0/cstring /usr/include/string.h \
- /usr/include/strings.h \
+ /usr/include/boost/serialization/array_wrapper.hpp \
+ /usr/include/boost/serialization/split_member.hpp \
+ /usr/include/boost/serialization/array_optimization.hpp \
+ /usr/include/boost/mpl/always.hpp \
+ /usr/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+ /usr/include/boost/mpl/aux_/arity_spec.hpp \
+ /usr/include/boost/mpl/apply.hpp /usr/include/boost/mpl/apply_fwd.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+ /usr/include/boost/mpl/placeholders.hpp /usr/include/boost/mpl/arg.hpp \
+ /usr/include/boost/mpl/arg_fwd.hpp \
+ /usr/include/boost/mpl/aux_/na_assert.hpp \
+ /usr/include/boost/mpl/aux_/arg_typedef.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+ /usr/include/boost/mpl/lambda.hpp /usr/include/boost/mpl/bind.hpp \
+ /usr/include/boost/mpl/bind_fwd.hpp \
+ /usr/include/boost/mpl/aux_/config/bind.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+ /usr/include/boost/mpl/next.hpp /usr/include/boost/mpl/next_prior.hpp \
+ /usr/include/boost/mpl/aux_/common_name_wknd.hpp \
+ /usr/include/boost/mpl/protect.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+ /usr/include/boost/mpl/aux_/full_lambda.hpp \
+ /usr/include/boost/mpl/quote.hpp \
+ /usr/include/boost/mpl/aux_/has_type.hpp \
+ /usr/include/boost/mpl/aux_/config/bcc.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+ /usr/include/boost/mpl/aux_/template_arity.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+ /usr/include/boost/type_traits/remove_const.hpp \
  /usr/include/boost/serialization/collection_traits.hpp \
  /usr/include/c++/12.2.0/climits \
  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h \
- /usr/include/c++/12.2.0/iostream /usr/include/c++/12.2.0/ostream \
- /usr/include/c++/12.2.0/ios /usr/include/c++/12.2.0/bits/basic_ios.h \
- /usr/include/c++/12.2.0/bits/locale_facets.h \
- /usr/include/c++/12.2.0/cwctype /usr/include/wctype.h \
- /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
- /usr/include/c++/12.2.0/bits/locale_facets.tcc \
- /usr/include/c++/12.2.0/bits/basic_ios.tcc \
- /usr/include/c++/12.2.0/bits/ostream.tcc /usr/include/c++/12.2.0/istream \
- /usr/include/c++/12.2.0/bits/istream.tcc
+ /usr/include/c++/12.2.0/algorithm \
+ /usr/include/c++/12.2.0/bits/stl_algo.h \
+ /usr/include/c++/12.2.0/bits/algorithmfwd.h \
+ /usr/include/c++/12.2.0/bits/stl_heap.h \
+ /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
+ /usr/include/c++/12.2.0/bits/uniform_int_dist.h

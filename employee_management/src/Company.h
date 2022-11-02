@@ -1,34 +1,30 @@
 #pragma once
 
-#include <boost/serialization/access.hpp>
-#include <boost/serialization/list.hpp>
-#include <string>
-#include <list>
-
-#include "Employee.h"
+#include "Department.h"
 
 class Company
 {
-  private:
     friend class boost::serialization::access;
-    template<class Archive>
-    void serialize(Archive & ar, const unsigned int version)
-    { 
-      ar & name;
-      ar & employees;
+    template <class Archive>
+    void serialize(Archive &ar, const unsigned int version)
+    {
+        ar &name;
+        ar &departments;
     }
 
     std::string name;
-    std::list<Employee> employees;
+    std::vector<Department> departments;
 
   public:
     Company() {}
     Company(std::string name) : name(name)
     {
-        employees = std::list<Employee>();
+        departments = std::vector<Department>();
     }
 
-    void add_employee(Employee e) { employees.push_back(e); }
+    void add_department(Department d);
+    // Throws invalid_argument exception
+    void add_employee(std::string department, Employee e);
 
-    void print_data() const;
+    void delete_department(std::string);
 };

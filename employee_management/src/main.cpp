@@ -1,7 +1,9 @@
+#include "Company.h"
+#include "Department.h"
+#include "Employee.h"
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
 #include <fstream>
-#include "Company.h"
 
 #include <boost/archive/archive_exception.hpp>
 #include <iostream>
@@ -10,11 +12,17 @@ int main()
 {
     // Create object
     Company c = Company("Company");
-    c.add_employee(Employee("Edgar", "Accountant", "Accounting", 56, 400000));
+    c.add_department(Department("Accounting"));
+    try
+    {
+        c.add_employee("Accounting", Employee("Edgar", "Accountant", 56, 400));
+    } catch (std::invalid_argument e) {
+        std::cout << e.what() << '\n';
+    }
 
     // Serialize object
     {
-        std::ofstream ofs("db");
+        std::ofstream ofs("db.db");
         boost::archive::text_oarchive oa(ofs);
         oa << c;
     }
@@ -22,7 +30,7 @@ int main()
     // Create object, with deserialization
     Company c2;
     {
-        std::ifstream ifs("db");
+        std::ifstream ifs("db.db");
         boost::archive::text_iarchive ia(ifs);
         ia >> c2;
     }
