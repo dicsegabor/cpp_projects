@@ -1,6 +1,5 @@
-#include "Company.h"
-#include "Department.h"
-#include "Employee.h"
+#include "Company.hpp"
+
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
 #include <fstream>
@@ -13,12 +12,7 @@ int main()
     // Create object
     Company c = Company("Company");
     c.add_department(Department("Accounting"));
-    try
-    {
-        c.add_employee("Accounting", Employee("Edgar", "Accountant", 56, 400));
-    } catch (std::invalid_argument e) {
-        std::cout << e.what() << '\n';
-    }
+    c.add_employee("Accounting", Employee("Edgar", "Accountant", 56, 400));
 
     // Serialize object
     {

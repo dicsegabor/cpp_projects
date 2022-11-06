@@ -3,8 +3,8 @@
 
 CMakeFiles/Employee_management_system.dir/Company.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.cpp \
   /usr/include/stdc-predef.h \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.h \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.h \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.hpp \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.hpp \
   /usr/include/boost/serialization/access.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
@@ -498,18 +498,24 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: /home/dicsegabor/dev/ow
   /usr/include/boost/type_traits/remove_const.hpp \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/include/c++/12.2.0/climits \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
+  /usr/include/c++/12.2.0/set \
+  /usr/include/c++/12.2.0/bits/stl_tree.h \
+  /usr/include/c++/12.2.0/ext/aligned_buffer.h \
+  /usr/include/c++/12.2.0/bits/stl_set.h \
+  /usr/include/c++/12.2.0/bits/stl_multiset.h \
+  /usr/include/c++/12.2.0/bits/erase_if.h \
+  /usr/include/boost/serialization/set.hpp \
   /usr/include/c++/12.2.0/algorithm \
   /usr/include/c++/12.2.0/bits/stl_algo.h \
   /usr/include/c++/12.2.0/bits/algorithmfwd.h \
   /usr/include/c++/12.2.0/bits/stl_heap.h \
   /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
-  /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
-  /usr/include/c++/12.2.0/cassert
+  /usr/include/c++/12.2.0/bits/uniform_int_dist.h
 
 CMakeFiles/Employee_management_system.dir/Employee.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.cpp \
   /usr/include/stdc-predef.h \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
   /usr/include/boost/serialization/access.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
@@ -714,8 +720,8 @@ CMakeFiles/Employee_management_system.dir/Employee.cpp.o: /home/dicsegabor/dev/o
 
 CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/main.cpp \
   /usr/include/stdc-predef.h \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.h \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.h \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.hpp \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.hpp \
   /usr/include/boost/serialization/access.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
@@ -1209,7 +1215,14 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
   /usr/include/boost/type_traits/remove_const.hpp \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/include/c++/12.2.0/climits \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
+  /usr/include/c++/12.2.0/set \
+  /usr/include/c++/12.2.0/bits/stl_tree.h \
+  /usr/include/c++/12.2.0/ext/aligned_buffer.h \
+  /usr/include/c++/12.2.0/bits/stl_set.h \
+  /usr/include/c++/12.2.0/bits/stl_multiset.h \
+  /usr/include/c++/12.2.0/bits/erase_if.h \
+  /usr/include/boost/serialization/set.hpp \
   /usr/include/boost/archive/text_iarchive.hpp \
   /usr/include/c++/12.2.0/istream \
   /usr/include/c++/12.2.0/ios \
@@ -1269,7 +1282,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
   /usr/include/c++/12.2.0/bits/shared_ptr.h \
   /usr/include/c++/12.2.0/bits/shared_ptr_base.h \
   /usr/include/c++/12.2.0/bits/allocated_ptr.h \
-  /usr/include/c++/12.2.0/ext/aligned_buffer.h \
   /usr/include/c++/12.2.0/ext/concurrence.h \
   /usr/include/c++/12.2.0/bits/shared_ptr_atomic.h \
   /usr/include/c++/12.2.0/bits/atomic_base.h \
@@ -1389,8 +1401,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/archive/detail/basic_oarchive.hpp:
 
-/usr/include/boost/archive/detail/common_oarchive.hpp:
-
 /usr/include/boost/archive/basic_text_oarchive.hpp:
 
 /usr/include/boost/integer.hpp:
@@ -1499,8 +1509,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/c++/12.2.0/bits/shared_ptr_atomic.h:
 
-/usr/include/c++/12.2.0/ext/aligned_buffer.h:
-
 /usr/include/c++/12.2.0/bits/allocated_ptr.h:
 
 /usr/include/c++/12.2.0/bits/shared_ptr_base.h:
@@ -1539,6 +1547,16 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/archive/detail/abi_suffix.hpp:
 
+/usr/include/boost/type_traits/is_unbounded_array.hpp:
+
+/usr/include/boost/archive/archive_exception.hpp:
+
+/usr/include/boost/archive/detail/abi_prefix.hpp:
+
+/usr/include/boost/archive/codecvt_null.hpp:
+
+/usr/include/boost/io_fwd.hpp:
+
 /usr/include/boost/mpl/numeric_cast.hpp:
 
 /usr/include/bits/endianness.h:
@@ -1555,6 +1573,10 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/serialization/level_enum.hpp:
 
+/usr/include/boost/io/ios_state.hpp:
+
+/usr/include/c++/12.2.0/bits/stl_tempbuf.h:
+
 /usr/include/boost/mpl/integral_c.hpp:
 
 /usr/include/boost/assert.hpp:
@@ -1570,6 +1592,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/type_traits/remove_pointer.hpp:
 
 /usr/include/stdlib.h:
+
+/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.hpp:
 
 /usr/include/boost/mpl/aux_/config/has_xxx.hpp:
 
@@ -1617,6 +1641,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/preprocessor/control/while.hpp:
 
+/usr/include/boost/preprocessor/logical/and.hpp:
+
 /usr/include/time.h:
 
 /usr/include/bits/types/locale_t.h:
@@ -1634,6 +1660,10 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/preprocessor/config/limits.hpp:
 
 /usr/include/c++/12.2.0/bits/refwrap.h:
+
+/usr/include/boost/mpl/integral_c_fwd.hpp:
+
+/usr/include/boost/preprocessor/logical/bool.hpp:
 
 /usr/include/boost/preprocessor/punctuation/comma_if.hpp:
 
@@ -1679,8 +1709,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/c++/12.2.0/bits/stringfwd.h:
 
-/usr/include/c++/12.2.0/cassert:
-
 /usr/include/boost/mpl/aux_/config/adl.hpp:
 
 /usr/include/boost/config/pragma_message.hpp:
@@ -1722,6 +1750,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/preprocessor/control/if.hpp:
 
 /usr/include/c++/12.2.0/new:
+
+/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp:
 
 /usr/include/c++/12.2.0/ext/numeric_traits.h:
 
@@ -1769,8 +1799,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/bits/floatn.h:
 
-/usr/include/boost/preprocessor/logical/and.hpp:
-
 /usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
 /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp:
@@ -1800,8 +1828,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/wctype.h:
 
 /usr/include/c++/12.2.0/bits/istream.tcc:
-
-/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
 
 /usr/include/boost/serialization/base_object.hpp:
 
@@ -1838,6 +1864,10 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/bits/types/__locale_t.h:
 
 /usr/include/boost/mpl/aux_/lambda_arity_param.hpp:
+
+/usr/include/boost/serialization/throw_exception.hpp:
+
+/usr/include/boost/mpl/aux_/na_spec.hpp:
 
 /usr/include/boost/type_traits/alignment_of.hpp:
 
@@ -1897,15 +1927,9 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/mpl/protect.hpp:
 
-/usr/include/c++/12.2.0/bits/cpp_type_traits.h:
-
 /usr/include/sys/types.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stdint.h:
-
-/usr/include/boost/mpl/integral_c_fwd.hpp:
-
-/usr/include/boost/preprocessor/logical/bool.hpp:
 
 /usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
@@ -1928,8 +1952,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/preprocessor/logical/limits/bool_256.hpp:
 
 /usr/include/boost/mpl/aux_/yes_no.hpp:
-
-/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Department.h:
 
 /usr/include/linux/close_range.h:
 
@@ -1959,12 +1981,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/config.hpp:
 
-/usr/include/boost/mpl/aux_/na.hpp:
-
-/usr/include/boost/exception/exception.hpp:
-
-/usr/include/unistd.h:
-
 /usr/include/boost/mpl/aux_/comparison_op.hpp:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
@@ -1981,11 +1997,11 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
 
+/usr/include/c++/12.2.0/bits/cpp_type_traits.h:
+
 /usr/include/features-time64.h:
 
 /usr/include/boost/serialization/tracking.hpp:
-
-/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.h:
 
 /usr/include/c++/12.2.0/bits/locale_facets.h:
 
@@ -1994,6 +2010,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/c++/12.2.0/ext/type_traits.h:
 
 /usr/include/c++/12.2.0/bits/allocator.h:
+
+/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Company.hpp:
 
 /usr/include/gnu/stubs-64.h:
 
@@ -2004,6 +2022,12 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
 /usr/include/boost/type_traits/is_void.hpp:
+
+/usr/include/boost/mpl/aux_/na.hpp:
+
+/usr/include/boost/exception/exception.hpp:
+
+/usr/include/unistd.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
 
@@ -2111,8 +2135,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/type_traits/aligned_storage.hpp:
 
-/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h:
-
 /usr/include/boost/archive/detail/basic_serializer.hpp:
 
 /usr/include/c++/12.2.0/bits/stl_algobase.h:
@@ -2131,7 +2153,13 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/preprocessor/list/reverse.hpp:
 
+/usr/include/boost/archive/detail/common_oarchive.hpp:
+
+/usr/include/c++/12.2.0/bits/erase_if.h:
+
 /usr/include/c++/12.2.0/bits/stl_pair.h:
+
+/usr/include/c++/12.2.0/bits/stl_set.h:
 
 /usr/include/boost/version.hpp:
 
@@ -2168,6 +2196,12 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/bits/sched.h:
 
 /usr/include/bits/struct_rwlock.h:
+
+/usr/include/boost/core/nvp.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
+/usr/include/c++/12.2.0/bits/stl_construct.h:
 
 /usr/include/boost/mpl/aux_/config/msvc.hpp:
 
@@ -2351,6 +2385,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/bits/types/struct_sched_param.h:
 
+/usr/include/c++/12.2.0/ext/aligned_buffer.h:
+
 /usr/include/bits/timex.h:
 
 /usr/include/bits/posix_opt.h:
@@ -2465,10 +2501,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/type_traits/is_reference.hpp:
 
-/usr/include/boost/mpl/aux_/na_spec.hpp:
-
-/usr/include/boost/serialization/throw_exception.hpp:
-
 /usr/include/boost/type_traits/is_lvalue_reference.hpp:
 
 /usr/include/boost/archive/text_oarchive.hpp:
@@ -2506,10 +2538,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/bits/types/struct_itimerspec.h:
 
 /usr/include/boost/integer_traits.hpp:
-
-/usr/include/boost/archive/detail/abi_prefix.hpp:
-
-/usr/include/boost/archive/codecvt_null.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/syslimits.h:
 
@@ -2621,6 +2649,8 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/mpl/aux_/config/bind.hpp:
 
+/usr/include/c++/12.2.0/set:
+
 /usr/include/bits/struct_mutex.h:
 
 /usr/include/boost/mpl/aux_/full_lambda.hpp:
@@ -2639,15 +2669,17 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
 
-/usr/include/boost/core/nvp.hpp:
-
-/usr/include/c++/12.2.0/bits/stl_construct.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/limits.h:
 
 /usr/include/c++/12.2.0/climits:
+
+/usr/include/c++/12.2.0/bits/stl_tree.h:
+
+/usr/include/c++/12.2.0/bits/stl_multiset.h:
+
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/usr/include/boost/serialization/set.hpp:
 
 /usr/include/boost/preprocessor/logical/bitor.hpp:
 
@@ -2704,13 +2736,3 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/limits.hpp:
 
 /usr/include/c++/12.2.0/bits/locale_conv.h:
-
-/usr/include/c++/12.2.0/bits/stl_tempbuf.h:
-
-/usr/include/boost/io/ios_state.hpp:
-
-/usr/include/boost/io_fwd.hpp:
-
-/usr/include/boost/type_traits/is_unbounded_array.hpp:
-
-/usr/include/boost/archive/archive_exception.hpp:

@@ -2,10 +2,10 @@
 
 #include <boost/serialization/access.hpp>
 #include <boost/serialization/vector.hpp>
-#include <vector>
 #include <string>
+#include <vector>
 
-#include "Employee.h"
+#include "Employee.hpp"
 
 class Department
 {
@@ -22,11 +22,19 @@ class Department
 
   public:
     Department() {}
-    Department(std::string name) : name(name), employees(std::vector<Employee>()) {}
+    Department(const Department &other)
+    {
+        name      = other.name;
+        employees = std::vector<Employee>(other.employees);
+    }
+    Department(std::string name)
+        : name(name), employees(std::vector<Employee>())
+    {
+    }
 
     void add_employee(const Employee &e) { employees.push_back(e); }
 
-    const std::string get_name() const { return this->name; }
+    const std::string get_name() const { return name; }
 
-    bool operator<(const Department &other) { return this->name < other.name; }
+    bool operator<(const Department &other) const { return name < other.name; }
 };

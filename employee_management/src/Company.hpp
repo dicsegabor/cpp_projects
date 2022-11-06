@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Department.h"
+#include "Department.hpp"
+#include <set>
+#include <boost/serialization/set.hpp>
 
 class Company
 {
@@ -13,13 +15,13 @@ class Company
     }
 
     std::string name;
-    std::vector<Department> departments;
+    std::set<Department> departments;
 
   public:
     Company() {}
     Company(std::string name) : name(name)
     {
-        departments = std::vector<Department>();
+        departments = std::set<Department>();
     }
 
     void add_department(Department d);

@@ -1,7 +1,7 @@
 CMakeFiles/Employee_management_system.dir/Employee.cpp.o: \
  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.cpp \
  /usr/include/stdc-predef.h \
- /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.h \
+ /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
  /usr/include/boost/serialization/access.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
