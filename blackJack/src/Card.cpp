@@ -21,7 +21,7 @@ Card::Card(int type, Suit suit) : type(type), suit(suit)
     value = type > 10 ? 10 : type;
 }
 
-void Card::print() const
+std::string Card::to_string() const
 {
-    std::cout << suit_names[static_cast<int>(suit)] << letter();
+    return suit_names[static_cast<int>(suit)] + letter();
 }

@@ -11,7 +11,7 @@ Deck::Deck()
 
     for (int s = 0; s < 4; s++)
         for (int i = 1; i <= 13; i++)
-            cards.push_back(Card(i, static_cast<Suit>(s)));
+            cards.push_back(Card(i, static_cast<Card::Suit>(s)));
 }
 
 Deck::Deck(std::vector<Card> cards) : cards(cards) {}
