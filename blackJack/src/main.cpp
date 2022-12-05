@@ -6,9 +6,7 @@ int main()
     Game game = Game(7);
 
     //while (!EOG)
-    //{
         game.new_game();
-    //}
 
     return 0;
 }

@@ -2,6 +2,9 @@
 
 #include "Deck.hpp"
 #include "Player.hpp"
+#include <iomanip>
+#include <iostream>
+#include <string>
 #include <vector>
 
 class Game
@@ -23,6 +26,8 @@ class Game
     void display_dealer_hided() const;
 
     void print(bool hide_dealer_card = true) const;
+
+    void wait_for_enter() const;
 
   public:
     Game(size_t number_of_players);
