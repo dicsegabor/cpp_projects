@@ -27,6 +27,8 @@ class Game
 
     void print(bool hide_dealer_card = true) const;
 
+    bool boolean_question(std::string question) const;
+
     void wait_for_enter() const;
 
   public:

@@ -567,7 +567,6 @@ CMakeFiles/Blackjack.dir/Game.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
   /usr/include/c++/12.2.0/bits/vector.tcc \
   /usr/include/c++/12.2.0/ctime \
   /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Player.hpp \
-  /usr/include/c++/12.2.0/cstddef \
   /usr/include/c++/12.2.0/iomanip \
   /usr/include/c++/12.2.0/locale \
   /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
@@ -967,7 +966,16 @@ CMakeFiles/Blackjack.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
   /usr/include/c++/12.2.0/bits/stl_bvector.h \
   /usr/include/c++/12.2.0/bits/vector.tcc \
   /usr/include/c++/12.2.0/ctime \
-  /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Player.hpp
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Player.hpp \
+  /usr/include/c++/12.2.0/iomanip \
+  /usr/include/c++/12.2.0/locale \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12.2.0/bits/codecvt.h \
+  /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12.2.0/bits/locale_conv.h
 
 
 /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/main.cpp:
@@ -989,8 +997,6 @@ CMakeFiles/Blackjack.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/messages_members.h:
 
 /usr/include/c++/12.2.0/iomanip:
-
-/usr/include/c++/12.2.0/cstddef:
 
 /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Game.hpp:
 

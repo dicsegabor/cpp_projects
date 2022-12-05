@@ -1,4 +1,6 @@
 #include "Game.hpp"
+#include <iostream>
+#include <string>
 
 #define CLEAR_SCREEN std::cout << "\x1B[2J\x1B[H";
 
@@ -32,19 +34,28 @@ void Game::initial_deal()
 
 void Game::deal_for_all()
 {
-    std::string answer;
     for (auto &player : players)
     {
         CLEAR_SCREEN
-        do {
-            std::cout << player.to_string() << "\n";
-            std::cout << "Do you want to draw an additional card (y/n)";
-            while (answer != "y" || answer != "n") std::cin >> answer;
+        std::cout << player.to_string() << "\n";
 
-            if (answer == "y") player.add_card(deck.deal_card());
+        while (boolean_question("Do you want to draw an additional card?"))
+        {
+            player.add_card(deck.deal_card());
+
+            if (player.get_state() == Player::State::Lose)
+            {
+                std::cout << "Sorry your score is over 21. You've lost!";
+                wait_for_enter();
+                break;
+            }
+
+            CLEAR_SCREEN
+            std::cout << player.to_string() << "\n";
         }
-        while (answer == "y");
     }
+
+    wait_for_enter();
 }
 
 void Game::deal_for_the_dealer()
@@ -61,7 +72,7 @@ void Game::new_game()
     deal_for_all();
     print();
     deal_for_the_dealer();
-    print();
+    print(false);
     // check_winner();
 }
 
@@ -81,6 +92,18 @@ void Game::print(bool hide_dealer_card) const
     for (const auto &player : players) std::cout << player.to_string() << "\n";
 
     wait_for_enter();
+}
+
+bool Game::boolean_question(std::string question) const
+{
+    std::string answer;
+
+    while (!(answer == "y" || answer == "n"))
+    {
+        std::cout << question + " (y/n): ";
+        std::cin >> answer;
+    }
+    return answer == "y";
 }
 
 void Game::wait_for_enter() const
