@@ -12,7 +12,7 @@ int main()
     // Create object
     Company c = Company("Company");
     c.add_department(Department("Accounting"));
-    c.add_employee("Accounting", Employee("Edgar", "Accountant", 56, 400));
+    //c.add_employee("Accounting", Employee("Edgar", "Accountant", 56, 400));
 
     // Serialize object
     {
