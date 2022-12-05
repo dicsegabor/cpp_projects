@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <stdexcept>
+#include <string>
 
 void Company::add_department(Department d) { departments.insert(d); }
 
@@ -10,7 +11,7 @@ void Company::delete_department(std::string department)
     departments.erase(department);
 }
 
-void Company::add_employee(const std::string department, const Employee e)
+void Company::add_employee(const std::string department, const std::string job, const Employee e)
 {
     auto d = departments.find(department);
 
@@ -20,7 +21,7 @@ void Company::add_employee(const std::string department, const Employee e)
         );
 
     auto new_department = Department(*d);
-    new_department.add_employee(e);
+    new_department.add_employee(job, &e);
 
     departments.erase(d);
     departments.insert(new_department);

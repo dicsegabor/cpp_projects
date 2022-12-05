@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Employee.hpp"
+#include "Job.hpp"
 
 class Department
 {
@@ -14,27 +15,26 @@ class Department
     void serialize(Archive &ar, const unsigned int version)
     {
         ar &name;
-        ar &employees;
+        ar &jobs;
     }
 
     std::string name;
-    std::vector<Employee> employees;
+    std::vector<Job> jobs;
 
   public:
     Department() {}
     Department(const Department &other)
     {
-        name      = other.name;
-        employees = std::vector<Employee>(other.employees);
+        name = other.name;
+        jobs = std::vector<Job>(other.jobs);
     }
-    Department(std::string name)
-        : name(name), employees(std::vector<Employee>())
-    {
-    }
+    Department(std::string name) : name(name), jobs(std::vector<Job>()) {}
 
-    void add_employee(const Employee &e) { employees.push_back(e); }
+    void add_job(const Job &j) { jobs.push_back(j); }
+    void add_employee(const std::string job, const Employee* e);
 
     const std::string get_name() const { return name; }
 
+    // Needed fo set usage
     bool operator<(const Department &other) const { return name < other.name; }
 };

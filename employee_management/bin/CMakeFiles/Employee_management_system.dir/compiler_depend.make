@@ -498,6 +498,7 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: /home/dicsegabor/dev/ow
   /usr/include/boost/type_traits/remove_const.hpp \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/include/c++/12.2.0/climits \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Job.hpp \
   /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
   /usr/include/c++/12.2.0/set \
   /usr/include/c++/12.2.0/bits/stl_tree.h \
@@ -1215,6 +1216,7 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
   /usr/include/boost/type_traits/remove_const.hpp \
   /usr/include/boost/serialization/collection_traits.hpp \
   /usr/include/c++/12.2.0/climits \
+  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Job.hpp \
   /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
   /usr/include/c++/12.2.0/set \
   /usr/include/c++/12.2.0/bits/stl_tree.h \
@@ -1875,6 +1877,10 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/bits/getopt_core.h:
 
+/usr/include/c++/12.2.0/bits/locale_conv.h:
+
+/usr/include/boost/limits.hpp:
+
 /usr/include/boost/serialization/is_bitwise_serializable.hpp:
 
 /usr/include/c++/12.2.0/bits/stl_uninitialized.h:
@@ -1956,8 +1962,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/linux/close_range.h:
 
 /usr/include/bits/types/time_t.h:
-
-/usr/include/c++/12.2.0/ext/string_conversions.h:
 
 /usr/include/boost/mpl/aux_/numeric_cast_utils.hpp:
 
@@ -2673,6 +2677,12 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /usr/include/c++/12.2.0/climits:
 
+/usr/include/c++/12.2.0/ext/string_conversions.h:
+
+/home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Job.hpp:
+
+/usr/include/boost/archive/text_iarchive.hpp:
+
 /usr/include/c++/12.2.0/bits/stl_tree.h:
 
 /usr/include/c++/12.2.0/bits/stl_multiset.h:
@@ -2713,8 +2723,6 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 
 /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/main.cpp:
 
-/usr/include/boost/archive/text_iarchive.hpp:
-
 /usr/include/boost/core/enable_if.hpp:
 
 /usr/include/boost/archive/detail/decl.hpp:
@@ -2732,7 +2740,3 @@ CMakeFiles/Employee_management_system.dir/main.cpp.o: /home/dicsegabor/dev/own_p
 /usr/include/boost/preprocessor/logical/compl.hpp:
 
 /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc:
-
-/usr/include/boost/limits.hpp:
-
-/usr/include/c++/12.2.0/bits/locale_conv.h:

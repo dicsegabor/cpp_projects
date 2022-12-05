@@ -12,14 +12,12 @@ class Employee
     void serialize(Archive &ar, const unsigned int version)
     {
         ar &name;
-        ar &job_title;
         ar &id;
         ar &age;
-        ar &salary;
     }
 
-    std::string name, job_title;
-    int id, age, salary;
+    std::string name, id;
+    int age;
 
     static int number;
 

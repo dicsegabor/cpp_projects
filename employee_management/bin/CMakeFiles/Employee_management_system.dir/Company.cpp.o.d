@@ -428,6 +428,7 @@ CMakeFiles/Employee_management_system.dir/Company.cpp.o: \
  /usr/include/boost/serialization/collection_traits.hpp \
  /usr/include/c++/12.2.0/climits \
  /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Employee.hpp \
+ /home/dicsegabor/dev/own_projects/c++/learning_projects/employee_management/src/Job.hpp \
  /usr/include/c++/12.2.0/set /usr/include/c++/12.2.0/bits/stl_tree.h \
  /usr/include/c++/12.2.0/ext/aligned_buffer.h \
  /usr/include/c++/12.2.0/bits/stl_set.h \

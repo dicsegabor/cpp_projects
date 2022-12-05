@@ -3,6 +3,7 @@
 #include "Department.hpp"
 #include <set>
 #include <boost/serialization/set.hpp>
+#include <string>
 
 class Company
 {
@@ -26,7 +27,7 @@ class Company
 
     void add_department(Department d);
     // Throws invalid_argument exception
-    void add_employee(std::string department, Employee e);
+    void add_employee(std::string department, std::string job, Employee e);
 
     void delete_department(std::string);
 };
