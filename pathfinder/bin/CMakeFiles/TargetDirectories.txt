@@ -1,0 +1,3 @@
+/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/bin/CMakeFiles/Pathfinder.dir
+/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/bin/CMakeFiles/edit_cache.dir
+/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/bin/CMakeFiles/rebuild_cache.dir
