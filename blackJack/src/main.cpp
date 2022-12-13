@@ -1,12 +1,12 @@
 ﻿#include "Game.hpp"
+#include <iostream>
 
 int main()
 {
-    bool EOG  = false;
-    Game game = Game(7);
+    Game game = Game(2);
 
-    //while (!EOG)
-        game.new_game();
+    while (game.play_game())
+        game.reset();
 
     return 0;
 }

@@ -575,7 +575,14 @@ CMakeFiles/Blackjack.dir/Game.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
   /usr/include/libintl.h \
   /usr/include/c++/12.2.0/bits/codecvt.h \
   /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/12.2.0/bits/locale_conv.h
+  /usr/include/c++/12.2.0/bits/locale_conv.h \
+  /usr/include/c++/12.2.0/algorithm \
+  /usr/include/c++/12.2.0/bits/stl_algo.h \
+  /usr/include/c++/12.2.0/bits/algorithmfwd.h \
+  /usr/include/c++/12.2.0/bits/stl_heap.h \
+  /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
+  /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
+  /usr/include/c++/12.2.0/limits
 
 CMakeFiles/Blackjack.dir/Player.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Player.cpp \
   /usr/include/stdc-predef.h \
@@ -984,6 +991,16 @@ CMakeFiles/Blackjack.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
 
 /home/dicsegabor/dev/own_projects/c++/learning_projects/blackJack/src/Player.cpp:
 
+/usr/include/c++/12.2.0/limits:
+
+/usr/include/c++/12.2.0/bits/uniform_int_dist.h:
+
+/usr/include/c++/12.2.0/bits/stl_heap.h:
+
+/usr/include/c++/12.2.0/bits/algorithmfwd.h:
+
+/usr/include/c++/12.2.0/algorithm:
+
 /usr/include/c++/12.2.0/bits/locale_facets_nonio.tcc:
 
 /usr/include/c++/12.2.0/bits/codecvt.h:
@@ -1198,6 +1215,8 @@ CMakeFiles/Blackjack.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
 
 /usr/include/bits/timesize.h:
 
+/usr/include/c++/12.2.0/bits/stl_tempbuf.h:
+
 /usr/include/bits/endian.h:
 
 /usr/include/stdc-predef.h:
@@ -1339,6 +1358,8 @@ CMakeFiles/Blackjack.dir/main.cpp.o: /home/dicsegabor/dev/own_projects/c++/learn
 /usr/include/c++/12.2.0/bits/basic_string.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/include/c++/12.2.0/bits/stl_algo.h:
 
 /usr/include/sys/single_threaded.h:
 

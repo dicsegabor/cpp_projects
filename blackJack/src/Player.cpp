@@ -17,6 +17,11 @@ void Player::add_card(Card card)
     if (sum_card_values() > 21) state = State::Lose;
 }
 
+void Player::empty_hand()
+{
+    cards = std::vector<Card>();
+}
+
 int Player::sum_card_values() const
 {
     int sum = 0;

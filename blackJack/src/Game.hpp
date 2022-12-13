@@ -34,5 +34,7 @@ class Game
   public:
     Game(size_t number_of_players);
 
-    void new_game();
+    bool play_game();
+
+    void reset();
 };

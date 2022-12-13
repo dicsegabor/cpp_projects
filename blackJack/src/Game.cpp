@@ -1,6 +1,11 @@
 #include "Game.hpp"
+#include "Player.hpp"
+#include <algorithm>
+#include <cstdlib>
 #include <iostream>
+#include <limits>
 #include <string>
+#include <vector>
 
 #define CLEAR_SCREEN std::cout << "\x1B[2J\x1B[H";
 
@@ -17,6 +22,13 @@ Game::Game(size_t number_of_players) : dealer(Player("Dealer"))
     for (size_t i = 1; i <= number_of_players; i++)
         players.push_back(Player("P" + std::to_string(i)));
 
+    deck = Deck();
+}
+
+void Game::reset()
+{
+    dealer.empty_hand();
+    for (auto &p : players) p.empty_hand();
     deck = Deck();
 }
 
@@ -43,12 +55,7 @@ void Game::deal_for_all()
         {
             player.add_card(deck.deal_card());
 
-            if (player.get_state() == Player::State::Lose)
-            {
-                std::cout << "Sorry your score is over 21. You've lost!";
-                wait_for_enter();
-                break;
-            }
+            if (player.get_state() == Player::State::Lose) break;
 
             CLEAR_SCREEN
             std::cout << player.to_string() << "\n";
@@ -63,9 +70,29 @@ void Game::deal_for_the_dealer()
     while (dealer.sum_card_values() < 17) deal_card_for(dealer);
 }
 
-void Game::check_winner() {}
+void Game::check_winner()
+{
+    std::vector<Player> still_in_play;
+    std::copy_if(
+        players.begin(), players.end(), std::back_inserter(still_in_play),
+        [](const Player &p) { return p.get_state() != Player::State::Lose; }
+    );
 
-void Game::new_game()
+    std::sort(
+        still_in_play.begin(), still_in_play.end(),
+        [](const Player &p1, const Player &p2)
+        { return p1.sum_card_values() > p2.sum_card_values(); }
+    );
+
+    int dealer_sum = dealer.sum_card_values();
+
+    if(still_in_play.empty()) std::cout << "The dealer wins!";
+    else if (still_in_play.empty() && dealer_sum > 21) std::cout << "No winners!";
+    else if(dealer_sum > still_in_play[0].sum_card_values()) 
+        std::cout << "The dealer wins!";
+}
+
+bool Game::play_game()
 {
     initial_deal();
     print();
@@ -73,7 +100,9 @@ void Game::new_game()
     print();
     deal_for_the_dealer();
     print(false);
-    // check_winner();
+    check_winner();
+    print(false);
+    return boolean_question("Do you want to start a new game?");
 }
 
 void Game::print(bool hide_dealer_card) const

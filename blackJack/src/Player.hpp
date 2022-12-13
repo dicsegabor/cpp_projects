@@ -25,13 +25,15 @@ class Player
 
     inline std::string get_name() const { return name; }
 
-    inline State get_state() { return state; }
+    inline State get_state() const { return state; }
 
     inline size_t get_card_num() { return cards.size(); }
 
     inline Card get_first_card() const { return cards.front(); }
 
     void add_card(Card card);
+
+    void empty_hand();
 
     int sum_card_values() const;
 
