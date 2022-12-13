@@ -3,19 +3,26 @@
 #include <map>
 #include <string>
 #include <utility>
-#include <set>
+#include <vector>
 
-typedef std::pair<int, int> Node;
-typedef std::pair<Node, Node> Edge;
+typedef std::pair<int, int> Node, Dimensions, ConnectionType;
 
 class Graph
 {
-    std::map<Node, std::set<Edge>> graph;
+    const Dimensions dimensions;
+    std::map<Node, std::vector<Node>> graph;
+
+    std::vector<Node> neighbours(Node n, std::vector<std::pair<int, int>> connections);
+
+    bool out_of_bounds(Node n) const;
 
   public:
-    Graph(int h, int w, std::set<Node> endpoints, std::set<std::pair<Node, char>> obstacles);
+    Graph(
+        int h, int w, std::vector<Node> obstacles,
+        std::map<Node, char> endpoints
+    );
 
-    static Graph parse_graph(std::string *input);
+    static Graph parse_from_string_array(std::string *input);
 
-    std::map<Node, std::set<Edge>> get_graph() const { return graph; }
+    std::map<Node, std::vector<Node>> get_graph() const { return graph; }
 };
