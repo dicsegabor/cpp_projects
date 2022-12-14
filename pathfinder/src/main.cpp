@@ -1,17 +1,47 @@
 #include <iostream>
+#include <istream>
+#include <regex>
+#include <string>
 
 #include "graph.hpp"
 
 int main()
 {
-    Graph g = Graph(2, 2, {{1,0}}, {{{0,0}, '4'}});
+    int h, w;
+    std::cin >> h;
+    std::cin >> w;
 
-    for(const auto &n : g.get_graph())
+    Graph g = Graph(h, w);
+
+    std::string line;
+    std::cin.ignore();
+    // cin leaves a newline character, so we ignore it
+    for (int i = 0; i < h; i++)
     {
-        std::cout << "(" << n.first.first << ", " << n.first.second << ") -> [ ";
-        for(const auto &e : n.second)
-            std::cout << "(" << e.first << ", " << e.second << ") ";
+        getline(std::cin, line);
 
-        std::cout << "]\n";
+        auto regex = std::regex("[1234567789abcdefABCDEF]");
+        for (std::sregex_iterator ri =
+                 std::sregex_iterator(line.begin(), line.end(), regex);
+             ri != std::sregex_iterator(); ri++)
+        {
+            std::smatch sm = *ri;
+            g.add_endpoints({
+                {{sm.position(), i}, sm.str()[0]}
+            });
+        }
+
+        regex = std::regex("[xX]");
+        for (std::sregex_iterator ri =
+                 std::sregex_iterator(line.begin(), line.end(), regex);
+             ri != std::sregex_iterator(); ri++)
+        {
+            std::smatch sm = *ri;
+            g.add_obstacles({
+                {sm.position(), i}
+            });
+        }
     }
+
+    g.print();
 }

@@ -12,17 +12,21 @@ class Graph
     const Dimensions dimensions;
     std::map<Node, std::vector<Node>> graph;
 
-    std::vector<Node> neighbours(Node n, std::vector<std::pair<int, int>> connections);
-
     bool out_of_bounds(Node n) const;
 
+    void disconnect_node(Node n, std::vector<ConnectionType> connections);
+
+    std::vector<Node>
+    get_neighbours(Node n, std::vector<ConnectionType> connections);
+
   public:
-    Graph(
-        int h, int w, std::vector<Node> obstacles,
-        std::map<Node, char> endpoints
-    );
+    Graph(int h, int w);
+
+    void add_endpoints(std::map<Node, char> endpoints);
+
+    void add_obstacles(std::vector<Node> obstacles);
 
     static Graph parse_from_string_array(std::string *input);
 
-    std::map<Node, std::vector<Node>> get_graph() const { return graph; }
+    void print() const;
 };
