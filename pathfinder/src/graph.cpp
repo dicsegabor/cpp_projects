@@ -81,6 +81,9 @@ void Graph::add_obstacles(std::vector<Node> obstacles)
 
 void Graph::clear_unconnected_nodes()
 {
+    for (auto it = endpoints.begin(); it != endpoints.end(); it++)
+        if (graph.at(*it).empty()) endpoints.erase(it);
+
     for (auto &n : graph)
         if (n.second.empty()) graph.erase(n.first);
 }

@@ -129,30 +129,6 @@ Pathfinder/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/build
 .PHONY : Pathfinder/fast
 
-bfs.o: bfs.cpp.o
-.PHONY : bfs.o
-
-# target to build an object file
-bfs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/bfs.cpp.o
-.PHONY : bfs.cpp.o
-
-bfs.i: bfs.cpp.i
-.PHONY : bfs.i
-
-# target to preprocess a source file
-bfs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/bfs.cpp.i
-.PHONY : bfs.cpp.i
-
-bfs.s: bfs.cpp.s
-.PHONY : bfs.s
-
-# target to generate assembly for a file
-bfs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/bfs.cpp.s
-.PHONY : bfs.cpp.s
-
 graph.o: graph.cpp.o
 .PHONY : graph.o
 
@@ -201,6 +177,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+path_finding.o: path_finding.cpp.o
+.PHONY : path_finding.o
+
+# target to build an object file
+path_finding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/path_finding.cpp.o
+.PHONY : path_finding.cpp.o
+
+path_finding.i: path_finding.cpp.i
+.PHONY : path_finding.i
+
+# target to preprocess a source file
+path_finding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/path_finding.cpp.i
+.PHONY : path_finding.cpp.i
+
+path_finding.s: path_finding.cpp.s
+.PHONY : path_finding.s
+
+# target to generate assembly for a file
+path_finding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pathfinder.dir/build.make CMakeFiles/Pathfinder.dir/path_finding.cpp.s
+.PHONY : path_finding.cpp.s
+
 utilities.o: utilities.cpp.o
 .PHONY : utilities.o
 
@@ -234,15 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Pathfinder"
-	@echo "... bfs.o"
-	@echo "... bfs.i"
-	@echo "... bfs.s"
 	@echo "... graph.o"
 	@echo "... graph.i"
 	@echo "... graph.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... path_finding.o"
+	@echo "... path_finding.i"
+	@echo "... path_finding.s"
 	@echo "... utilities.o"
 	@echo "... utilities.i"
 	@echo "... utilities.s"

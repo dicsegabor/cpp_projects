@@ -4,8 +4,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-
-typedef std::pair<int, int> Node, Dimensions, ConnectionType;
+#include "utilities.hpp"
 
 class Graph
 {

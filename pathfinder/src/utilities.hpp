@@ -3,6 +3,8 @@
 #include <utility>
 #include <vector>
 
+typedef std::pair<int, int> Node, Dimensions, ConnectionType;
+
 const std::pair<int, int> directions[4] = {
         {1,  0 }, // Right
         {0,  -1}, // Up
