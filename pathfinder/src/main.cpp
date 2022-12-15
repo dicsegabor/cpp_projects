@@ -1,7 +1,6 @@
 #include <iostream>
-#include <istream>
-#include <regex>
 #include <string>
+#include <vector>
 
 #include "graph.hpp"
 
@@ -13,35 +12,14 @@ int main()
 
     Graph g = Graph(h, w);
 
-    std::string line;
-    std::cin.ignore();
     // cin leaves a newline character, so we ignore it
-    for (int i = 0; i < h; i++)
-    {
-        getline(std::cin, line);
+    std::cin.ignore();
 
-        auto regex = std::regex("[1234567789abcdefABCDEF]");
-        for (std::sregex_iterator ri =
-                 std::sregex_iterator(line.begin(), line.end(), regex);
-             ri != std::sregex_iterator(); ri++)
-        {
-            std::smatch sm = *ri;
-            g.add_endpoints({
-                {{sm.position(), i}, sm.str()[0]}
-            });
-        }
+    // Read all 'h' lines
+    std::string lines[h];
+    for (int i = 0; i < h; i++) getline(std::cin, lines[i]);
 
-        regex = std::regex("[xX]");
-        for (std::sregex_iterator ri =
-                 std::sregex_iterator(line.begin(), line.end(), regex);
-             ri != std::sregex_iterator(); ri++)
-        {
-            std::smatch sm = *ri;
-            g.add_obstacles({
-                {sm.position(), i}
-            });
-        }
-    }
+    g.parse_string_array(lines);
 
     g.print();
 }

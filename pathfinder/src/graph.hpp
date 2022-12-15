@@ -9,7 +9,13 @@ typedef std::pair<int, int> Node, Dimensions, ConnectionType;
 
 class Graph
 {
-    const Dimensions dimensions;
+    const char sn_charset[3] = "tT";
+    const char ep_charset[22] = "123456789abcdefABCDEF";
+    const char ob_charset[3] = "xX";
+
+    const std::pair<size_t, size_t> dimensions;
+    Node start_node;
+    std::vector<Node> endpoints;
     std::map<Node, std::vector<Node>> graph;
 
     bool out_of_bounds(Node n) const;
@@ -26,7 +32,9 @@ class Graph
 
     void add_obstacles(std::vector<Node> obstacles);
 
-    static Graph parse_from_string_array(std::string *input);
+    void clear_unconnected_nodes();
+
+    void parse_string_array(const std::string *input);
 
     void print() const;
 };

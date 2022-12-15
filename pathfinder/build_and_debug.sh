@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 echo -- Building project
-cmake --build ./bin
+cmake --build build-debug
 echo -- Running project
-./bin/Pathfinder
+gdb build-debug/Pathfinder

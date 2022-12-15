@@ -2,9 +2,10 @@
 
 #include <stdexcept>
 
-unsigned int hex_char_to_uint(char c)
+int hex_char_to_uint(char c)
 {
-    if (!(('0' <= c && c <= '9') || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f')))
+    if (!(('0' <= c && c <= '9') || ('A' <= c && c <= 'F') ||
+          ('a' <= c && c <= 'f')))
         throw std::invalid_argument(
             "The character with the code '" + std::to_string(c) +
             "' cannot be interpreted!"
@@ -18,22 +19,23 @@ std::vector<std::pair<int, int>> get_connections(char hexa, bool invert)
 {
     auto connection_type = hex_char_to_uint(hexa);
 
-    if (invert) connection_type = 15 - connection_type;
-
-    const std::pair<int, int> connection_types[4] = {
-        {1,  0 }, // Right
-        {0,  -1}, // Up
-        {-1, 0 }, // Left
-        {0,  1 }, // Down
-    };
+    if (invert) connection_type = ~connection_type;
 
     // Iterating over the 4 bits, and adding appropriate connections
     std::vector<std::pair<int, int>> connections;
     for (int i = 0; i < 4; i++)
     {
-        if (connection_type & 0b01) connections.push_back(connection_types[i]);
+        if (connection_type & 0b01) connections.push_back(directions[i]);
         connection_type = connection_type >> 1;
     }
 
     return connections;
+}
+
+bool contains(const char *charset, const char c)
+{
+    for (int i = 0; charset[i] != '\0'; i++)
+        if (charset[i] == c) return true;
+
+    return false;
 }

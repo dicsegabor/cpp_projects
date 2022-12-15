@@ -2,12 +2,12 @@
 #include "utilities.hpp"
 
 #include <algorithm>
+#include <iostream>
 #include <map>
 #include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
-#include <iostream>
 
 // Creates the edges to all possible neighbours
 std::vector<Node>
@@ -30,15 +30,16 @@ bool Graph::out_of_bounds(Node n) const
            n.second >= dimensions.second;
 }
 
-void Graph::disconnect_node(Node n, std::vector<ConnectionType> connections)
+void Graph::disconnect_node(Node n, std::vector<Node> i_connections)
 {
     std::vector<Node> &edges = graph.at(n);
-    for (auto &neighbour : get_neighbours(n, connections))
+    for (auto &neighbour : get_neighbours(n, i_connections))
     {
         try
         {
             std::vector<Node> &n_edges = graph.at(neighbour);
-            n_edges.erase(std::find(n_edges.begin(), n_edges.end(), n));
+            auto it = std::find(n_edges.begin(), n_edges.end(), n);
+            if (it != n_edges.end()) n_edges.erase(it);
         }
         catch (const std::out_of_range &oor)
         {
@@ -48,7 +49,7 @@ void Graph::disconnect_node(Node n, std::vector<ConnectionType> connections)
     }
 }
 
-Graph::Graph(int h, int w) : dimensions({h, w})
+Graph::Graph(int h, int w) : dimensions({w, h})
 {
     // Creating all nodes based on the give dimensions
     std::vector<Node> nodes;
@@ -63,7 +64,10 @@ Graph::Graph(int h, int w) : dimensions({h, w})
 void Graph::add_endpoints(std::map<Node, char> endpoints)
 {
     for (const auto &ep : endpoints)
+    {
         disconnect_node(ep.first, get_connections(ep.second, true));
+        this->endpoints.push_back(ep.first);
+    }
 }
 
 void Graph::add_obstacles(std::vector<Node> obstacles)
@@ -75,15 +79,53 @@ void Graph::add_obstacles(std::vector<Node> obstacles)
     }
 }
 
+void Graph::clear_unconnected_nodes()
+{
+    for (auto &n : graph)
+        if (n.second.empty()) graph.erase(n.first);
+}
+
+void Graph::parse_string_array(const std::string *input)
+{
+    std::map<Node, char> endpoints_with_type;
+    std::vector<Node> obstacles;
+
+    for (size_t i = 0; i < dimensions.second; i++)
+    {
+        for (size_t j = 0; j < dimensions.first; j++)
+        {
+            char c = input[i][j];
+            if (contains(ep_charset, c))
+            {
+                endpoints_with_type.insert({
+                    {j, i},
+                    c
+                });
+            }
+            else if (contains(ob_charset, c)) { obstacles.push_back({j, i}); }
+            else if (contains(sn_charset, c)) { start_node = {j, i}; }
+        }
+    }
+
+    add_endpoints(endpoints_with_type);
+    add_obstacles(obstacles);
+    clear_unconnected_nodes();
+}
+
 void Graph::print() const
 {
-    for (const auto &n : graph)
+    if (graph.empty())
+        std::cout << "The graph is empty!\n";
+    else
     {
-        std::cout << "(" << n.first.first << ", " << n.first.second
-                  << ") -> [ ";
-        for (const auto &e : n.second)
-            std::cout << "(" << e.first << ", " << e.second << ") ";
+        for (const auto &n : graph)
+        {
+            std::cout << "(" << n.first.first << ", " << n.first.second
+                      << ") -> [ ";
+            for (const auto &e : n.second)
+                std::cout << "(" << e.first << ", " << e.second << ") ";
 
-        std::cout << "]\n";
+            std::cout << "]\n";
+        }
     }
 }
