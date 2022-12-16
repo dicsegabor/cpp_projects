@@ -29,7 +29,7 @@ int main()
             breadth_first_search(g.get_graph(), g.get_start_node(), ep);
 
         sum += path_length(paths, g.get_start_node(), ep);
-        print_path(reconstruct_path(paths, g.get_start_node(), ep), lines, g.dimensions);
+        //print_path(reconstruct_path(paths, g.get_start_node(), ep), lines, g.dimensions);
     }
 
     std::cout << sum << "\n";

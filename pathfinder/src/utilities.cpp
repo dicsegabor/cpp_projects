@@ -1,6 +1,5 @@
 #include "utilities.hpp"
 
-#include <stdexcept>
 #include <vector>
 
 // Convert hexa char to int, works with lower and uppercase letters
