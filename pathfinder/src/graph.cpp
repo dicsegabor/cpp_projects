@@ -45,7 +45,8 @@ void Graph::disconnect_node(Node n, std::vector<Node> i_connections)
         {
         }
 
-        edges.erase(std::find(edges.begin(), edges.end(), neighbour));
+        auto it = std::find(edges.begin(), edges.end(), neighbour);
+        if(*it == neighbour) edges.erase(it);
     }
 }
 
