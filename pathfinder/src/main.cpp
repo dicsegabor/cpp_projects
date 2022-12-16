@@ -22,14 +22,14 @@ int main()
     g.parse_string_array(lines);
 
     int sum = 0;
+
     for (const auto &ep : g.get_endpoints())
     {
         auto paths =
             breadth_first_search(g.get_graph(), g.get_start_node(), ep);
 
         sum += path_length(paths, g.get_start_node(), ep);
-
-        print_path(reconstruct_path(paths, g.get_start_node(), ep), lines);
+        print_path(reconstruct_path(paths, g.get_start_node(), ep), lines, g.dimensions);
     }
 
     std::cout << sum << "\n";

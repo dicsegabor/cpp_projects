@@ -1,9 +1,9 @@
 #pragma once
 
+#include "utilities.hpp"
 #include <map>
 #include <string>
 #include <utility>
-#include "utilities.hpp"
 #include <vector>
 
 class Graph
@@ -12,7 +12,10 @@ class Graph
     const char ep_charset[22] = "123456789abcdefABCDEF";
     const char ob_charset[3]  = "xX";
 
+  public:
     const std::pair<size_t, size_t> dimensions;
+
+  private:
     Node start_node;
     std::vector<Node> endpoints;
     std::map<Node, std::vector<Node>> graph;
@@ -21,8 +24,7 @@ class Graph
 
     void disconnect_node(Node n, std::vector<Dir> connections);
 
-    std::vector<Node>
-    get_neighbours(Node n, std::vector<Dir> connections);
+    std::vector<Node> get_neighbours(Node n, std::vector<Dir> connections);
 
     void add_endpoints(std::map<Node, char> endpoints);
 

@@ -13,4 +13,4 @@ int path_length(std::map<Node, Node> paths, Node start, Node goal);
 
 std::vector<Node> reconstruct_path(std::map<Node, Node> paths, Node start, Node goal);
 
-void print_path(std::vector<Node> path, const std::string *lines);
+void print_path(std::vector<Node> path, const std::string *lines, std::pair<size_t, size_t> dimensions);
