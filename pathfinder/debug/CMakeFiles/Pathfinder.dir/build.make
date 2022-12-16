@@ -97,19 +97,19 @@ CMakeFiles/Pathfinder.dir/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pathfinder.dir/graph.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/graph.cpp -o CMakeFiles/Pathfinder.dir/graph.cpp.s
 
-CMakeFiles/Pathfinder.dir/bfs.cpp.o: CMakeFiles/Pathfinder.dir/flags.make
-CMakeFiles/Pathfinder.dir/bfs.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/bfs.cpp
-CMakeFiles/Pathfinder.dir/bfs.cpp.o: CMakeFiles/Pathfinder.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pathfinder.dir/bfs.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pathfinder.dir/bfs.cpp.o -MF CMakeFiles/Pathfinder.dir/bfs.cpp.o.d -o CMakeFiles/Pathfinder.dir/bfs.cpp.o -c /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/bfs.cpp
+CMakeFiles/Pathfinder.dir/path_finding.cpp.o: CMakeFiles/Pathfinder.dir/flags.make
+CMakeFiles/Pathfinder.dir/path_finding.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/path_finding.cpp
+CMakeFiles/Pathfinder.dir/path_finding.cpp.o: CMakeFiles/Pathfinder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Pathfinder.dir/path_finding.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Pathfinder.dir/path_finding.cpp.o -MF CMakeFiles/Pathfinder.dir/path_finding.cpp.o.d -o CMakeFiles/Pathfinder.dir/path_finding.cpp.o -c /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/path_finding.cpp
 
-CMakeFiles/Pathfinder.dir/bfs.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pathfinder.dir/bfs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/bfs.cpp > CMakeFiles/Pathfinder.dir/bfs.cpp.i
+CMakeFiles/Pathfinder.dir/path_finding.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Pathfinder.dir/path_finding.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/path_finding.cpp > CMakeFiles/Pathfinder.dir/path_finding.cpp.i
 
-CMakeFiles/Pathfinder.dir/bfs.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pathfinder.dir/bfs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/bfs.cpp -o CMakeFiles/Pathfinder.dir/bfs.cpp.s
+CMakeFiles/Pathfinder.dir/path_finding.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Pathfinder.dir/path_finding.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/path_finding.cpp -o CMakeFiles/Pathfinder.dir/path_finding.cpp.s
 
 CMakeFiles/Pathfinder.dir/utilities.cpp.o: CMakeFiles/Pathfinder.dir/flags.make
 CMakeFiles/Pathfinder.dir/utilities.cpp.o: /home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/utilities.cpp
@@ -129,7 +129,7 @@ CMakeFiles/Pathfinder.dir/utilities.cpp.s: cmake_force
 Pathfinder_OBJECTS = \
 "CMakeFiles/Pathfinder.dir/main.cpp.o" \
 "CMakeFiles/Pathfinder.dir/graph.cpp.o" \
-"CMakeFiles/Pathfinder.dir/bfs.cpp.o" \
+"CMakeFiles/Pathfinder.dir/path_finding.cpp.o" \
 "CMakeFiles/Pathfinder.dir/utilities.cpp.o"
 
 # External object files for target Pathfinder
@@ -137,7 +137,7 @@ Pathfinder_EXTERNAL_OBJECTS =
 
 Pathfinder: CMakeFiles/Pathfinder.dir/main.cpp.o
 Pathfinder: CMakeFiles/Pathfinder.dir/graph.cpp.o
-Pathfinder: CMakeFiles/Pathfinder.dir/bfs.cpp.o
+Pathfinder: CMakeFiles/Pathfinder.dir/path_finding.cpp.o
 Pathfinder: CMakeFiles/Pathfinder.dir/utilities.cpp.o
 Pathfinder: CMakeFiles/Pathfinder.dir/build.make
 Pathfinder: CMakeFiles/Pathfinder.dir/link.txt

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/bfs.cpp" "CMakeFiles/Pathfinder.dir/bfs.cpp.o" "gcc" "CMakeFiles/Pathfinder.dir/bfs.cpp.o.d"
   "/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/graph.cpp" "CMakeFiles/Pathfinder.dir/graph.cpp.o" "gcc" "CMakeFiles/Pathfinder.dir/graph.cpp.o.d"
   "/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/main.cpp" "CMakeFiles/Pathfinder.dir/main.cpp.o" "gcc" "CMakeFiles/Pathfinder.dir/main.cpp.o.d"
+  "/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/path_finding.cpp" "CMakeFiles/Pathfinder.dir/path_finding.cpp.o" "gcc" "CMakeFiles/Pathfinder.dir/path_finding.cpp.o.d"
   "/home/dicsegabor/dev/own_projects/c++/learning_projects/pathfinder/src/utilities.cpp" "CMakeFiles/Pathfinder.dir/utilities.cpp.o" "gcc" "CMakeFiles/Pathfinder.dir/utilities.cpp.o.d"
   )
 

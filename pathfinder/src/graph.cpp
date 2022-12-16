@@ -1,5 +1,4 @@
 #include "graph.hpp"
-#include "utilities.hpp"
 
 #include <algorithm>
 #include <iostream>
@@ -9,27 +8,27 @@
 #include <utility>
 #include <vector>
 
-// Creates the edges to all possible neighbours
-std::vector<Node>
-Graph::get_neighbours(Node n, std::vector<ConnectionType> connections)
+// Creates the edges to all possible neighbours, chech for bounds
+std::vector<Node> Graph::get_neighbours(Node n, std::vector<Dir> dirs)
 {
     std::vector<Node> neighbours;
-    for (const auto &c : connections)
+    for (const auto &dir : dirs)
     {
-        Node temp_node = {n.first + c.first, n.second + c.second};
+        Node temp_node = {n.first + dir.first, n.second + dir.second};
         if (!out_of_bounds(temp_node)) neighbours.push_back(temp_node);
     }
 
     return neighbours;
 }
 
-// Tests if the give n node is outside of the dimensions of the graph
+// Tests if the given node is outside of the dimensions of the graph
 bool Graph::out_of_bounds(Node n) const
 {
     return n.first < 0 || n.first >= dimensions.first || n.second < 0 ||
            n.second >= dimensions.second;
 }
 
+// Disconnects the given node from its neighbours based on inverted connections
 void Graph::disconnect_node(Node n, std::vector<Node> i_connections)
 {
     std::vector<Node> &edges = graph.at(n);
@@ -41,6 +40,7 @@ void Graph::disconnect_node(Node n, std::vector<Node> i_connections)
             auto it = std::find(n_edges.begin(), n_edges.end(), n);
             if (it != n_edges.end()) n_edges.erase(it);
         }
+        // it deletes this neighbor regardless of it's existence
         catch (const std::out_of_range &oor)
         {
         }
@@ -51,12 +51,12 @@ void Graph::disconnect_node(Node n, std::vector<Node> i_connections)
 
 Graph::Graph(int h, int w) : dimensions({w, h})
 {
-    // Creating all nodes based on the give dimensions
+    // Creating all nodes based on the given dimensions
     std::vector<Node> nodes;
     for (int i = 0; i < h; i++)
         for (int j = 0; j < w; j++) nodes.push_back({j, i});
 
-    // Creating all edges
+    // Creating all edges/neighbours
     for (auto &n : nodes)
         graph.insert({n, get_neighbours(n, get_connections('F'))});
 }
@@ -66,7 +66,9 @@ void Graph::add_endpoints(std::map<Node, char> endpoints)
     for (const auto &ep : endpoints)
     {
         disconnect_node(ep.first, get_connections(ep.second, true));
-        this->endpoints.push_back(ep.first);
+        // If the node has no connections, then we don't add it to the list of
+        // endpoints, because it will be deleted
+        if (!graph.at(ep.first).empty()) this->endpoints.push_back(ep.first);
     }
 }
 
@@ -81,9 +83,6 @@ void Graph::add_obstacles(std::vector<Node> obstacles)
 
 void Graph::clear_unconnected_nodes()
 {
-    for (auto it = endpoints.begin(); it != endpoints.end(); it++)
-        if (graph.at(*it).empty()) endpoints.erase(it);
-
     for (auto &n : graph)
         if (n.second.empty()) graph.erase(n.first);
 }

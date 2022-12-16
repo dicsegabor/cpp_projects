@@ -3,8 +3,8 @@
 #include <map>
 #include <string>
 #include <utility>
-#include <vector>
 #include "utilities.hpp"
+#include <vector>
 
 class Graph
 {
@@ -19,10 +19,10 @@ class Graph
 
     bool out_of_bounds(Node n) const;
 
-    void disconnect_node(Node n, std::vector<ConnectionType> connections);
+    void disconnect_node(Node n, std::vector<Dir> connections);
 
     std::vector<Node>
-    get_neighbours(Node n, std::vector<ConnectionType> connections);
+    get_neighbours(Node n, std::vector<Dir> connections);
 
     void add_endpoints(std::map<Node, char> endpoints);
 
@@ -33,11 +33,11 @@ class Graph
   public:
     Graph(int h, int w);
 
-    Node get_start_node() const { return start_node; }
+    inline Node get_start_node() const { return start_node; }
 
-    std::vector<Node> get_endpoints() const { return endpoints; }
+    inline std::vector<Node> get_endpoints() const { return endpoints; }
 
-    std::map<Node, std::vector<Node>> get_graph() const { return graph; }
+    inline std::map<Node, std::vector<Node>> get_graph() const { return graph; }
 
     void parse_string_array(const std::string *input);
 

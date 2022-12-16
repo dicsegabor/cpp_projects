@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Pathfinder.dir/main.cpp.o CMakeFiles/Pathfinder.dir/graph.cpp.o CMakeFiles/Pathfinder.dir/bfs.cpp.o CMakeFiles/Pathfinder.dir/utilities.cpp.o -o Pathfinder 
