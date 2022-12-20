@@ -33,3 +33,6 @@
 
 # DB-s
 *.db
+
+# Binary dirs
+bin
