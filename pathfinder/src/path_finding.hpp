@@ -6,7 +6,7 @@
 #include <string>
 
 std::map<Node, Node> breadth_first_search(
-    std::map<Node, std::vector<Node>> graph, Node start, Node goal
+    std::map<Node, std::vector<Node>, comp> graph, Node start, Node goal
 );
 
 int path_length(std::map<Node, Node> paths, Node start, Node goal);

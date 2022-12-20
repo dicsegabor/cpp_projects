@@ -18,7 +18,7 @@ class Graph
   private:
     Node start_node;
     std::vector<Node> endpoints;
-    std::map<Node, std::vector<Node>> graph;
+    std::map<Node, std::vector<Node>, comp> graph;
 
     bool out_of_bounds(Node n) const;
 
@@ -39,7 +39,7 @@ class Graph
 
     inline std::vector<Node> get_endpoints() const { return endpoints; }
 
-    inline std::map<Node, std::vector<Node>> get_graph() const { return graph; }
+    inline std::map<Node, std::vector<Node>, comp> get_graph() const { return graph; }
 
     void parse_string_array(const std::string *input);
 

@@ -8,7 +8,7 @@
 
 // The path can be reconstructed in by starting from the goal
 std::map<Node, Node> breadth_first_search(
-    std::map<Node, std::vector<Node>> graph, Node start, Node goal
+    std::map<Node, std::vector<Node>, comp> graph, Node start, Node goal
 )
 {
     // an expanding frontier on which we iterate
