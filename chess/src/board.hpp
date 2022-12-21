@@ -20,8 +20,9 @@ class Board
   public:
     Board(size_t width = 8, size_t height = 8);
 
+    // Getters, setters
     const std::map<Coordinate, Field> get_fields() const { return fields; }
-    
+
     // TODO: populate from something, probably file
     void populate();
     void move_figure(Move m);
