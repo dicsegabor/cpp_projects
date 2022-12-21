@@ -1,9 +1,9 @@
-#include "board.hpp"
+#include "graphics.hpp"
 
 int main()
 {
     Board b = Board();
     b.populate();
-    b.print();
+    print_board(b);
     return 0;
 }

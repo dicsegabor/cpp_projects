@@ -21,10 +21,16 @@ const std::map<Type, int> figure_values = {
     {Type::King,   100}
 };
 
-enum class Color
+enum Color
 {
+    Black = 30,
+    Red,
+    Green,
+    Yellow,
+    Blue,
+    Magenta,
+    Cyan,
     White,
-    Black
 };
 
 struct Coordinate
