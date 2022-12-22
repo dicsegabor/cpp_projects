@@ -12,7 +12,16 @@ enum class Type
     King
 };
 
-const std::map<Type, int> figure_values = {
+const std::map<char, Type> type_chars = {
+    {'P', Type::Pawn  },
+    {'B', Type::Bishop},
+    {'N', Type::Knight},
+    {'R', Type::Rook  },
+    {'Q', Type::Queen },
+    {'K', Type::King  }
+};
+
+const std::map<Type, int> type_values = {
     {Type::Pawn,   1  },
     {Type::Bishop, 3  },
     {Type::Knight, 3  },
@@ -31,6 +40,11 @@ enum Color
     Magenta,
     Cyan,
     White,
+};
+
+const std::map<char, Color> color_chars = {
+    {'B', Color::Black},
+    {'W', Color::White},
 };
 
 struct Coordinate
