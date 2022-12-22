@@ -2,22 +2,18 @@
 #include "figure.hpp"
 #include "rules.hpp"
 
-#include <cstddef>
 #include <fstream>
-#include <iostream>
 #include <memory>
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <utility>
 
 Board::Board(size_t width, size_t height) : WIDTH(width), HEIGHT(height)
 {
     for (size_t y = 0; y < HEIGHT; y++)
         for (size_t x = 0; x < WIDTH; x++)
-            fields.insert({
-                {x, y},
-                Field()
-            });
+            fields.insert(std::make_pair(Coordinate(x,y), Field()));
 }
 
 bool Board::in_bounds(Coordinate c)
@@ -45,9 +41,7 @@ void Board::load(std::string file)
 
         auto type  = type_chars.at(t);
         auto color = color_chars.at(c);
-        fields.at({x, y}).set_figure(
-            std::make_shared<Figure>(Figure(type, color, moved))
-        );
+        fields.at({x, y}).set_figure(Figure(type, color, moved));
     }
 
     infile.close();

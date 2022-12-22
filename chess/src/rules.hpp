@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstddef>
 #include <map>
 
 enum class Type
@@ -50,6 +51,8 @@ const std::map<char, Color> color_chars = {
 struct Coordinate
 {
     std::size_t x, y;
+
+    Coordinate(std::size_t x, std::size_t y) : x(x), y(y) {}
 
     bool operator<(const Coordinate &other) const
     {

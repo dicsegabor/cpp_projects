@@ -40,7 +40,7 @@ void print_board(const Board b)
             {
                 size_t x = w / 5;
                 size_t y = h / 3;
-                auto f   = b.get_fields().at({x, y}).get_figure();
+                const auto &f   = b.get_fields().at({x, y}).get_figure();
                 if (f)
                     std::cout << color_text(
                         figure_to_string(*f), f->get_color(), background
