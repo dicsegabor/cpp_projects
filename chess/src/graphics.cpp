@@ -1,5 +1,6 @@
 #include "graphics.hpp"
 
+#include <cstddef>
 #include <iostream>
 #include <sstream>
 
@@ -28,24 +29,31 @@ std::string figure_to_string(const Figure &f)
 
 void print_board(const Board b)
 {
-
     Color dark = Color::Yellow, light = Color::Green;
     Color background = dark;
-    for (size_t y = 0; y < b.HEIGHT; y++)
+    
+    for (size_t h = 0; h < 3 * b.HEIGHT; h++)
     {
-        for (size_t x = 0; x < b.WIDTH; x++)
+        for (size_t w = 0; w < 5 * b.WIDTH; w++)
         {
-            auto f = b.get_fields().at({x, y}).get_figure();
-            if (f)
-                std::cout << color_text(
-                    figure_to_string(*f), f->get_color(), background
-                );
+            if (w % 5 == 2 && h % 3 == 1)
+            {
+                size_t x = w / 5;
+                size_t y = h / 3;
+                auto f   = b.get_fields().at({x, y}).get_figure();
+                if (f)
+                    std::cout << color_text(
+                        figure_to_string(*f), f->get_color(), background
+                    );
+                else
+                    std::cout << color_text(" ", light, background);
+            }
             else
                 std::cout << color_text(" ", light, background);
 
-            background = background == dark ? light : dark;
+            if (w % 5 == 4) background = background == dark ? light : dark;
         }
         std::cout << "\n";
-        background = background == dark ? light : dark;
+        if (h % 3 == 2) background = background == dark ? light : dark;
     }
 }
