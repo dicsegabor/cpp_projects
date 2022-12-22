@@ -3,7 +3,7 @@
 int main()
 {
     Board b = Board();
-    b.populate();
+    b.load("default_board.txt");
     print_board(b);
     return 0;
 }

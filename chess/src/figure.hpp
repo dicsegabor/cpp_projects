@@ -14,8 +14,10 @@ class Figure
 
     // Methods
   public:
-    Figure(Type type, Color color) : type(type), color(color), moved(false) {}
-    Figure(std::string params);
+    Figure(Type type, Color color, bool moved = false)
+        : type(type), color(color), moved(moved)
+    {
+    }
 
     // Getters, setters
     Type get_type() const { return type; }
