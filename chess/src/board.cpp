@@ -2,8 +2,13 @@
 #include "figure.hpp"
 #include "rules.hpp"
 
+#include <cstddef>
+#include <fstream>
+#include <iostream>
 #include <memory>
+#include <sstream>
 #include <stdexcept>
+#include <string>
 
 Board::Board(size_t width, size_t height) : WIDTH(width), HEIGHT(height)
 {
@@ -20,14 +25,32 @@ bool Board::in_bounds(Coordinate c)
     return c.x >= 0 && c.x < WIDTH && c.y >= 0 && c.y < HEIGHT;
 }
 
-void Board::populate()
+void Board::load(std::string file)
 {
-    fields.at({0, 7}).set_figure(
-        std::make_shared<Figure>(Figure(Type::Pawn, Color::Black))
-    );
-    fields.at({1, 7}).set_figure(
-        std::make_shared<Figure>(Figure(Type::Pawn, Color::White))
-    );
+    std::ifstream infile(file);
+    std::string line;
+    while (std::getline(infile, line))
+    {
+        std::istringstream iss(line);
+
+        char t, c;
+        bool moved;
+        size_t x, y;
+        if (!(iss >> t >> c >> moved >> x >> y))
+        {
+            throw std::invalid_argument(
+                "Te given line '" + line + "' is incorrect!"
+            );
+        }
+
+        auto type  = type_chars.at(t);
+        auto color = color_chars.at(c);
+        fields.at({x, y}).set_figure(
+            std::make_shared<Figure>(Figure(type, color, moved))
+        );
+    }
+
+    infile.close();
 }
 
 void Board::move_figure(Move m)

@@ -24,6 +24,6 @@ class Board
     const std::map<Coordinate, Field> get_fields() const { return fields; }
 
     // TODO: populate from something, probably file
-    void populate();
+    void load(std::string file);
     void move_figure(Move m);
 };
