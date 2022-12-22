@@ -11,7 +11,7 @@ void Field::move_figure(Field &other)
     other.figure = std::move(figure);
 }
 
-void Field::set_figure(Figure f)
+void Field::set_figure(const Figure &f)
 {
     if (figure) throw std::invalid_argument("A non empty field cannot be set!");
     figure = std::unique_ptr<Figure>(new Figure(f));

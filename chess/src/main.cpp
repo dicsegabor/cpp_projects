@@ -3,7 +3,10 @@
 int main()
 {
     Field f;
+    Figure fig = Figure(Type::Pawn, Color::Black);
+    f.set_figure(fig);
     Field g = Field(f);
+
     Board b = Board();
     b.load("default_board.txt");
     print_board(b);

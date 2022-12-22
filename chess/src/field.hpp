@@ -18,7 +18,6 @@ class Field
   public:
     Field() : value_modifier(0) {}
 
-    // TODO: Fix this somehow, segfault on this line
     Field(const Field &other)
         : value_modifier(other.value_modifier),
           figure(std::unique_ptr<Figure>(new Figure(*other.figure)))
@@ -28,7 +27,7 @@ class Field
     // Getters, setters
     int get_value() const { return value_modifier + figure->get_value(); }
     const std::unique_ptr<Figure> &get_figure() const { return figure; }
-    void set_figure(Figure f);
+    void set_figure(const Figure &f);
 
     void move_figure(Field &other);
     void attack_or_protect_field(const Figure &other);

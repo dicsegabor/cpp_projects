@@ -41,7 +41,8 @@ void Board::load(std::string file)
 
         auto type  = type_chars.at(t);
         auto color = color_chars.at(c);
-        fields.at({x, y}).set_figure(Figure(type, color, moved));
+        Figure f = Figure(type, color, moved);
+        fields.at({x, y}).set_figure(f);
     }
 
     infile.close();
