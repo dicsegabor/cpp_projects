@@ -18,15 +18,15 @@ class Field
   public:
     Field() : value_modifier(0) {}
 
-    Field(const Field &other)
-        : value_modifier(other.value_modifier),
-          figure(std::unique_ptr<Figure>(new Figure(*other.figure)))
+    Field(const Field &other) : value_modifier(other.value_modifier)
     {
+        if (other.figure)
+            figure = std::unique_ptr<Figure>(new Figure(*other.figure));
     }
 
     // Getters, setters
     int get_value() const { return value_modifier + figure->get_value(); }
-    const std::unique_ptr<Figure> &get_figure() const { return figure; }
+    const Figure* get_figure() const { return figure.get(); }
     void set_figure(const Figure &f);
 
     void move_figure(Field &other);
