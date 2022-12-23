@@ -53,8 +53,8 @@ void Board::move_figure(Move m)
     if (!in_bounds(m.first) || !in_bounds(m.second))
         throw std::invalid_argument("The given move is out of bounds!");
 
-    auto from = fields.at(m.first);
-    auto to   = fields.at(m.second);
+    auto &from = fields.at(m.first);
+    auto &to   = fields.at(m.second);
 
     from.move_figure(to);
 }
