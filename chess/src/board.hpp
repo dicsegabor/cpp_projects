@@ -2,10 +2,8 @@
 
 #include <map>
 
-#include "other.hpp"
 #include "field.hpp"
-
-// TODO: Creating a separate IO class
+#include "other.hpp"
 
 class Board
 {
@@ -28,6 +26,7 @@ class Board
     const std::map<Coordinate, Field> get_fields() const { return fields; }
 
     // IO
+    // TODO: Creating a separate IO class
     void load(std::string file);
 
     // Other
