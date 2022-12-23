@@ -1,6 +1,7 @@
 #pragma once
 
 #include "rules.hpp"
+#include <ostream>
 
 // Used in IO
 const std::map<char, Type> type_chars = {

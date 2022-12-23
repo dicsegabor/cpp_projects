@@ -1,8 +1,6 @@
 #pragma once
 
 #include "rules.hpp"
-#include <memory>
-#include <string>
 
 class Figure
 {

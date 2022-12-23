@@ -1,10 +1,7 @@
 #pragma once
 
 #include "figure.hpp"
-#include <exception>
 #include <memory>
-#include <stdexcept>
-#include <utility>
 
 class Field
 {
@@ -27,5 +24,6 @@ class Field
 
     // Other
     void move_figure(Field &other);
+    // Maybe put into rules
     void attack_or_protect_field(const Figure &other);
 };

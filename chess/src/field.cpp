@@ -1,10 +1,7 @@
 #include "field.hpp"
 #include "figure.hpp"
 
-#include <algorithm>
-#include <memory>
 #include <stdexcept>
-#include <utility>
 
 Field::Field(const Field &other) : value_modifier(other.value_modifier)
 {

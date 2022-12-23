@@ -5,6 +5,8 @@
 #include "other.hpp"
 #include "field.hpp"
 
+// TODO: Creating a separate IO class
+
 class Board
 {
     // Variables

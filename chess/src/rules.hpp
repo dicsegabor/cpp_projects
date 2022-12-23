@@ -1,8 +1,6 @@
 #pragma once
 
-#include <cstddef>
 #include <map>
-#include <ostream>
 
 enum class Type
 {
