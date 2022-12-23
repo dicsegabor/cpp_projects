@@ -27,20 +27,21 @@ std::string figure_to_string(const Figure &f)
     }
 }
 
-void print_board(const Board b)
+void print_board(const Board &b)
 {
     Color dark = Color::Yellow, light = Color::Green;
     Color background = dark;
-    
+
     for (size_t h = 0; h < 3 * b.HEIGHT; h++)
     {
         for (size_t w = 0; w < 5 * b.WIDTH; w++)
         {
             if (w % 5 == 2 && h % 3 == 1)
             {
-                size_t x = w / 5;
-                size_t y = h / 3;
-                const auto &f   = b.get_fields().at({x, y}).get_figure();
+                size_t x      = w / 5;
+                size_t y      = h / 3;
+                auto field = b.get_fields().at({x, y});
+                auto f = field.get_figure();
                 if (f)
                     std::cout << color_text(
                         figure_to_string(*f), f->get_color(), background
