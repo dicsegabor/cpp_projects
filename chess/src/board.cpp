@@ -1,6 +1,6 @@
 #include "board.hpp"
 #include "figure.hpp"
-#include "rules.hpp"
+#include "other.hpp"
 
 #include <fstream>
 #include <memory>
@@ -13,7 +13,7 @@ Board::Board(size_t width, size_t height) : WIDTH(width), HEIGHT(height)
 {
     for (size_t y = 0; y < HEIGHT; y++)
         for (size_t x = 0; x < WIDTH; x++)
-            fields.insert(std::make_pair(Coordinate(x,y), Field()));
+            fields.insert(std::make_pair(Coordinate(x, y), Field()));
 }
 
 bool Board::in_bounds(Coordinate c)
@@ -23,9 +23,9 @@ bool Board::in_bounds(Coordinate c)
 
 void Board::load(std::string file)
 {
-    std::ifstream infile(file);
+    std::ifstream input_file(file);
     std::string line;
-    while (std::getline(infile, line))
+    while (std::getline(input_file, line))
     {
         std::istringstream iss(line);
 
@@ -41,20 +41,21 @@ void Board::load(std::string file)
 
         auto type  = type_chars.at(t);
         auto color = color_chars.at(c);
-        Figure f = Figure(type, color, moved);
-        fields.at({x, y}).set_figure(f);
+        auto f     = Figure(type, color, moved);
+        fields.at(Coordinate(x, y)).set_figure(f);
     }
 
-    infile.close();
+    input_file.close();
 }
 
-void Board::move_figure(Move m)
+bool Board::move_figure(Move m)
 {
-    if (!in_bounds(m.first) || !in_bounds(m.second))
-        throw std::invalid_argument("The given move is out of bounds!");
+    if (!in_bounds(m.first) || !in_bounds(m.second)) return false;
 
     auto &from = fields.at(m.first);
     auto &to   = fields.at(m.second);
 
     from.move_figure(to);
+
+    return true;
 }

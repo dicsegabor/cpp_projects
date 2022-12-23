@@ -6,10 +6,16 @@
 #include <stdexcept>
 #include <utility>
 
-void Field::move_figure(Field &other)
+Field::Field(const Field &other) : value_modifier(other.value_modifier)
 {
-    other.figure = std::move(figure);
+    if (other.figure)
+    {
+        auto f = new Figure(*other.figure);
+        figure = std::unique_ptr<Figure>(f);
+    }
 }
+
+void Field::move_figure(Field &other) { other.figure = std::move(figure); }
 
 void Field::set_figure(const Figure &f)
 {

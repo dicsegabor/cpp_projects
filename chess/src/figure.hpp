@@ -15,6 +15,7 @@ class Figure
 
     // Methods
   public:
+    // Constructors
     Figure(Type type, Color color, bool moved = false)
         : type(type), color(color), moved(moved)
     {
@@ -26,6 +27,7 @@ class Figure
     bool get_moved() const { return moved; }
     int get_value() { return type_values.at(type); };
 
+    // Other
     void set_type(Type type) { this->type = type; }
     void set_moved() { moved = true; }
 };

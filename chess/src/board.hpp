@@ -2,6 +2,7 @@
 
 #include <map>
 
+#include "other.hpp"
 #include "field.hpp"
 
 class Board
@@ -18,12 +19,15 @@ class Board
     bool in_bounds(Coordinate c);
 
   public:
+    // Constructors
     Board(size_t width = 8, size_t height = 8);
 
     // Getters, setters
     const std::map<Coordinate, Field> get_fields() const { return fields; }
 
-    // TODO: populate from something, probably file
+    // IO
     void load(std::string file);
-    void move_figure(Move m);
+
+    // Other
+    bool move_figure(Move m);
 };

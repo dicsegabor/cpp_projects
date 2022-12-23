@@ -16,19 +16,16 @@ class Field
 
     // Methods
   public:
+    // Constructors
     Field() : value_modifier(0) {}
-
-    Field(const Field &other) : value_modifier(other.value_modifier)
-    {
-        if (other.figure)
-            figure = std::unique_ptr<Figure>(new Figure(*other.figure));
-    }
+    Field(const Field &other);
 
     // Getters, setters
     int get_value() const { return value_modifier + figure->get_value(); }
-    const Figure* get_figure() const { return figure.get(); }
+    const Figure *get_figure() const { return figure.get(); }
     void set_figure(const Figure &f);
 
+    // Other
     void move_figure(Field &other);
     void attack_or_protect_field(const Figure &other);
 };
