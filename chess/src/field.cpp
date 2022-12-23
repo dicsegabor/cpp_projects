@@ -15,7 +15,11 @@ Field::Field(const Field &other) : value_modifier(other.value_modifier)
     }
 }
 
-void Field::move_figure(Field &other) { other.figure = std::move(figure); }
+void Field::move_figure(Field &other)
+{
+    figure->set_moved();
+    other.figure = std::move(figure);
+}
 
 void Field::set_figure(const Figure &f)
 {
