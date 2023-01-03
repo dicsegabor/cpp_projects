@@ -5,7 +5,6 @@
 class Figure
 {
     // Variables
-  public:
   private:
     Type type;
     Color color;
@@ -20,12 +19,12 @@ class Figure
     }
 
     // Getters, setters
-    Type get_type() const { return type; }
-    Color get_color() const { return color; }
-    bool get_moved() const { return moved; }
-    int get_value() { return type_values.at(type); };
+    inline Type get_type() const { return type; }
+    inline Color get_color() const { return color; }
+    inline bool get_moved() const { return moved; }
+    inline int get_value() const { return type_values.at(type); };
 
     // Other
-    void set_type(Type type) { this->type = type; }
-    void set_moved() { moved = true; }
+    inline void set_type(Type type) { this->type = type; }
+    inline void set_moved() { moved = true; }
 };

@@ -15,7 +15,7 @@ Board::Board(size_t width, size_t height) : WIDTH(width), HEIGHT(height)
             fields.insert(std::make_pair(Coordinate(x, y), Field()));
 }
 
-bool Board::in_bounds(Coordinate c)
+bool Board::in_bounds(Coordinate c) const
 {
     return c.x >= 0 && c.x < WIDTH && c.y >= 0 && c.y < HEIGHT;
 }
@@ -57,4 +57,11 @@ bool Board::move_figure(Move m)
     from.move_figure(to);
 
     return true;
+}
+
+int Board::get_value() const
+{
+    int sum = 0;
+    for (const auto &e : fields) { sum += e.second.get_value(); }
+    return sum;
 }

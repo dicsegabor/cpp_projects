@@ -14,12 +14,15 @@ class Field
     // Methods
   public:
     // Constructors
-    Field() : value_modifier(0) {}
+    inline Field() : value_modifier(0) {}
     Field(const Field &other);
 
     // Getters, setters
-    int get_value() const { return value_modifier + figure->get_value(); }
-    const Figure *get_figure() const { return figure.get(); }
+    inline int get_value() const
+    {
+        return value_modifier + figure->get_value();
+    }
+    inline const Figure *get_figure() const { return figure.get(); }
     void set_figure(const Figure &f);
 
     // Other
