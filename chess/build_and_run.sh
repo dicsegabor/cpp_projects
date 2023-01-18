@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 echo -- Building project
-cmake --build ./bin
+cmake --build ./build
 echo -- Running project
-./bin/Chess
+./build/chess

@@ -18,7 +18,6 @@ int main()
     // Read all 'h' lines
     std::string lines[h];
     for (int i = 0; i < h; i++) getline(std::cin, lines[i]);
-
     g.parse_string_array(lines);
 
     int sum = 0;
